@@ -103,6 +103,10 @@ header {
     gap: 1rem;
 }
 
+.header-image img {
+    filter: drop-shadow(2px 2px 20px cyan);
+}
+
 .profile-pic {
     width: 200px;
     height: 200px;
@@ -132,6 +136,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 20px;
+  padding: 20px;
 }
 
 .contenedor-servicios ul {
@@ -139,12 +145,17 @@ header {
     margin: 0%;
     margin-top: 20px;
 }
+
 .servicio {
-  width: 25%;
-  padding: 50px 38px 50px 38px;
-  border-radius: 10px;
-  margin-bottom: 40px;
-  color: #fff;
+    width: 30%; /* Cambiado de 25% para dar más espacio */
+    min-height: 400px; /* Altura mínima para consistencia */
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    color: #fff;
+    position: relative; /* Para posicionamiento del ícono */
+    display: flex;
+    flex-direction: column;
 }
 
 .violeta {
@@ -160,14 +171,13 @@ header {
   margin: 0;
 }
 
-.contenedor-servicios img {
-  align-self: flex-end;
-  float: right;
-}
-
 .icono {
-    align-self: self-end;
-    float: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px; /* O el tamaño que prefieras */
+    height: auto;
+    opacity: 0.8;
 }
 
 .servicio p {
